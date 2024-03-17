@@ -1,0 +1,569 @@
+:root {
+  --blue: #345ff6;
+  --gunmetal: #253347;
+  --dark-electric-blue: #5e6e85;
+  --borders: #d8e2e7;
+  --pure-white: #ffffff;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 580px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px 217px;
+  background: linear-gradient(
+    290.1deg,
+    #d6e6fe 0%,
+    rgba(214, 252, 254, 0) 100%
+  );
+  border-radius: 0px 0px 35px 35px;
+}
+
+.logo {
+  width: 40px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.05em;
+  color: var(--gunmetal);
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.intro-paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--dark-electric-blue);
+  margin-top: 0;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 24px;
+  background: #ffffff;
+  box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+  border-radius: 16px;
+  margin-left: 24px;
+  margin-right: 23px;
+  position: absolute;
+  top: 75%; /*471px*/
+}
+
+.calc-heading {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.05em;
+  color: #253347;
+  margin-top: 0;
+}
+
+.radio-btns {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.radio-container:last-of-type {
+  position: absolute;
+  left: 52.5%;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.radio {
+  width: 31px;
+  height: 31px;
+  background: #ffffff;
+  border: 1px solid #d8e2e7;
+  margin: 0;
+}
+
+.radio:hover {
+  background: var(--blue);
+}
+
+.label-radio {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #253347;
+}
+
+.fields-container {
+  flex-direction: column;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.label-options {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #5e6e85;
+  margin-bottom: 8px;
+}
+
+.imperial-field,
+.metric,
+.fields-container {
+  display: flex;
+}
+
+.input-fields {
+  gap: 16px;
+}
+
+.imperial {
+  display: none;
+}
+
+.imperial-input-container {
+  display: flex;
+  gap: 16px;
+}
+
+.imperial-input {
+  box-sizing: border-box;
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px; */
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #d8e2e7;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 24px;
+  /* line-height: 29px; */
+  letter-spacing: -0.05em;
+  color: #253347;
+  width: 100%;
+}
+
+.units {
+  position: absolute;
+  right: 24px;
+  top: 62%;
+  margin-top: 0;
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.05em;
+  color: #345ff6;
+}
+
+.units-1 {
+  left: 31%;
+}
+
+.metric {
+  /* display: none; */
+  flex-direction: column;
+}
+
+.metric-input {
+  box-sizing: border-box;
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #d8e2e7;
+  border-radius: 12px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.05em;
+  color: #253347;
+}
+
+.metric-input:focus,
+.imperial-input:focus {
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #345ff6;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* WebKit/Blink browsers */
+  margin: 0; /* Remove margin */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* WebKit/Blink browsers */
+  margin: 0; /* Remove margin */
+}
+
+.output {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 32px;
+  background: linear-gradient(90deg, #345ff7 0%, #587dff 100%);
+  border-radius: 16px;
+  width: 100%;
+}
+
+.your-bmi {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.bmi {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.output-info {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #ffffff;
+  margin-top: 0;
+  /* max-width: 210px; */
+}
+
+.output-info span {
+  font-weight: 700;
+}
+
+.welcome {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+}
+
+.welcome-info {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #ffffff;
+  margin-top: 0;
+  /* max-width: 210px; */
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.results-info {
+  padding: 0 24px;
+  margin-bottom: 71px;
+}
+
+.image-div {
+  margin-bottom: 48px;
+}
+
+.results-info h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  color: #253347;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.results-info p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #5e6e85;
+  margin-top: 0;
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-limits {
+  display: flex;
+  align-items: center;
+}
+
+h4 {
+  margin-top: 0;
+}
+
+.curved-line {
+  display: none;
+}
+
+@media only screen and (min-width: 540px) {
+  .output-info,
+  .welcome-info {
+    max-width: 330px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* .calculator {
+    top: 70%;
+  } */
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 37.5rem) {
+  .hero {
+    margin-bottom: 300px;
+  }
+  .intro {
+    padding: 32px 43px 326px 39px;
+  }
+  .logo {
+    margin-bottom: 40px;
+  }
+  .calculator {
+    margin-left: 39px;
+    margin-right: 43px;
+    max-width: 564px;
+    top: 55%;
+  }
+  .radio-btns {
+    position: relative;
+  }
+  .radio-container:last-of-type {
+    position: absolute;
+    left: 51.2%;
+  }
+  .metric {
+    flex-direction: row;
+  }
+  .output {
+    flex-direction: row;
+    align-items: center;
+    border-radius: 16px 999px 999px 16px;
+    gap: 112px; /*192*/
+  }
+  .results {
+    flex-direction: row;
+  }
+  .results-info {
+    max-width: 331px;
+    margin-bottom: 34px;
+    padding-left: 0;
+    margin-left: 75px;
+    padding-right: 0;
+    margin-right: 43px;
+  }
+  /* .image-div {
+    position: absolute;
+    width: 435px;
+    height: 411.09px;
+    left: -116px;
+    top: 917px;
+  } */
+}
+
+/* @media only screen and (min-width: 768px) and (max-width: 1355px) {
+  .calculator {
+    left: calc(736px - 5 * (100vw - 1355px) / 1355);
+  }
+  .intro {
+    padding-left: calc(116px - 5 * (100vw - 1355px) / 1355);
+  }
+} */
+
+/* Desktop Styles */
+@media only screen and (min-width: 60.0625rem) {
+  body {
+    padding-top: 1px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-bottom: 65px;
+  }
+  .intro {
+    align-items: flex-start;
+    text-align: left;
+    padding: 75px 298px 200px 116px;
+    max-width: 978px;
+  }
+  .intro-paragraph {
+    max-width: 465px;
+  }
+  .logo {
+    width: 64px;
+    margin-bottom: 127px;
+  }
+  h1 {
+    font-size: 64px;
+    margin-bottom: 35px;
+  }
+  .calculator {
+    height: fit-content;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    left: 736px;
+    top: 166px;
+  }
+  .output {
+    gap: 100px;
+  }
+  .bmi {
+    font-size: 64px;
+  }
+  .curved-line {
+    display: block;
+    position: absolute;
+    left: 1188px;
+    top: 0;
+  }
+  .results-info h2 {
+    font-size: 48px;
+    letter-spacing: -0.05em;
+    margin-bottom: 35px;
+  }
+  .tips {
+    flex-direction: row;
+  }
+}
