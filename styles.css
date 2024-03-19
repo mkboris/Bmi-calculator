@@ -739,11 +739,15 @@ h4 {
   }
 
   .limitations {
-    margin: 0 140px 120px 140px;
+    margin: 0 calc(6.8% + 45px) 120px;
     grid-template-columns: auto auto auto;
     row-gap: 32px;
     column-gap: 32px;
     position: relative;
+  }
+
+  .limits-container {
+    max-width: 365px;
   }
 
   .limits:nth-child(1),
@@ -759,6 +763,25 @@ h4 {
   .limits:nth-child(5),
   .limits:nth-child(6) {
     grid-row: 3;
+  }
+
+  /* .limits:nth-child(1) {
+    position: relative;
+  } */
+
+  /* .limits:nth-child(2) {
+    position: relative;
+    right: 30%;
+  } */
+
+  .limits:nth-child(5) {
+    position: relative;
+    left: 50%;
+  }
+
+  .limits:nth-child(6) {
+    position: relative;
+    left: 50%;
   }
 
   .limits-text {
@@ -782,20 +805,19 @@ h4 {
   .limits:nth-child(6) {
     grid-column: auto;
   }
-
-  .curved-line-right {
-    display: block;
-    position: absolute;
-    left: 305px;
-    top: 2203px;
-  }
 }
 
 @media only screen and (min-width: 1330px) {
   .curved-line {
     display: block;
     position: absolute;
-    left: 82%;
+    left: 85%;
     top: -10%;
+  }
+  .curved-line-right {
+    display: block;
+    position: absolute;
+    left: 305px;
+    top: 2203px;
   }
 }
