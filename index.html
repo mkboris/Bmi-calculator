@@ -26,119 +26,127 @@
       <section class="hero">
         <!-- Text area -->
         <header class="intro">
-          <img class="logo" src="assets/images/logo.svg" alt="" />
-          <h1>Body Mass Index Calculator</h1>
-          <p class="intro-paragraph">
-            Better understand your weight in relation to your height using our
-            body mass index (BM) calculator. While BMI is not the sole
-            determinant of a healthy weight, it offers a valuable starting point
-            to evaluate your overall health and well-being.
-          </p>
-        </header>
-        <!-- BMI calculator -->
-        <div class="calculator">
-          <p class="calc-heading">Enter your details below</p>
-          <!-- Radio buttons -->
-          <div class="radio-btns">
-            <div class="radio-container">
-              <input class="radio" type="radio" name="Metric" id="metric" />
-              <label class="label-radio" for="metric">Metric</label>
-            </div>
-            <div class="radio-container">
-              <input class="radio" type="radio" name="Imperial" id="imperial" />
-              <label class="label-radio" for="imperial">Imperial</label>
-            </div>
+          <!-- Logo and intro text container -->
+          <div class="logo-text">
+            <img class="logo" src="assets/images/logo.svg" alt="" />
+            <h1>Body Mass Index Calculator</h1>
+            <p class="intro-paragraph">
+              Better understand your weight in relation to your height using our
+              body mass index (BM) calculator. While BMI is not the sole
+              determinant of a healthy weight, it offers a valuable starting
+              point to evaluate your overall health and well-being.
+            </p>
           </div>
-          <!-- Metric input fields -->
-          <div class="input-fields metric">
-            <div class="fields-container">
-              <label class="label-options" for="height">Height</label>
-              <input
-                class="metric-input"
-                type="number"
-                name="Height"
-                id="cm"
-                placeholder="0"
-              />
-              <p class="units">cm</p>
+          <!-- BMI calculator -->
+          <div class="calculator">
+            <p class="calc-heading">Enter your details below</p>
+            <!-- Radio buttons -->
+            <div class="radio-btns">
+              <div class="radio-container">
+                <input class="radio" type="radio" name="Metric" id="metric" />
+                <label class="label-radio" for="metric">Metric</label>
+              </div>
+              <div class="radio-container">
+                <input
+                  class="radio"
+                  type="radio"
+                  name="Imperial"
+                  id="imperial"
+                />
+                <label class="label-radio" for="imperial">Imperial</label>
+              </div>
             </div>
-            <div class="fields-container">
-              <label class="label-options" for="weight">Weight</label>
-              <input
-                class="metric-input"
-                type="number"
-                name="Weight"
-                id="kg"
-                placeholder="0"
-              />
-              <p class="units">kg</p>
-            </div>
-          </div>
-          <!-- Imperial input fields -->
-          <div class="input-fields imperial">
-            <div class="imperial-field">
+            <!-- Metric input fields -->
+            <div class="input-fields metric">
               <div class="fields-container">
                 <label class="label-options" for="height">Height</label>
-                <div class="imperial-input-container">
-                  <input
-                    class="imperial-input"
-                    type="number"
-                    name="Height"
-                    id="feet"
-                    placeholder="0"
-                  />
-                  <p class="units units-1">ft</p>
-                  <input
-                    class="imperial-input"
-                    type="number"
-                    name="Height"
-                    id="inches"
-                    placeholder="0"
-                  />
-                  <p class="units">in</p>
-                </div>
+                <input
+                  class="metric-input"
+                  type="number"
+                  name="Height"
+                  id="cm"
+                  placeholder="0"
+                />
+                <p class="units">cm</p>
               </div>
-            </div>
-            <div class="imperial-field">
               <div class="fields-container">
-                <label class="label-options" for="height">Weight</label>
-                <div class="imperial-input-container">
-                  <input
-                    class="imperial-input"
-                    type="number"
-                    name="Weight"
-                    id="st"
-                    placeholder="0"
-                  />
-                  <p class="units units-1">st</p>
-                  <input
-                    class="imperial-input"
-                    type="number"
-                    name="Weight"
-                    id="lbs"
-                    placeholder="0"
-                  />
-                  <p class="units">lbs</p>
+                <label class="label-options" for="weight">Weight</label>
+                <input
+                  class="metric-input"
+                  type="number"
+                  name="Weight"
+                  id="kg"
+                  placeholder="0"
+                />
+                <p class="units">kg</p>
+              </div>
+            </div>
+            <!-- Imperial input fields -->
+            <div class="input-fields imperial">
+              <div class="imperial-field">
+                <div class="fields-container">
+                  <label class="label-options" for="height">Height</label>
+                  <div class="imperial-input-container">
+                    <input
+                      class="imperial-input"
+                      type="number"
+                      name="Height"
+                      id="feet"
+                      placeholder="0"
+                    />
+                    <p class="units-1">ft</p>
+                    <input
+                      class="imperial-input"
+                      type="number"
+                      name="Height"
+                      id="inches"
+                      placeholder="0"
+                    />
+                    <p class="units">in</p>
+                  </div>
+                </div>
+              </div>
+              <div class="imperial-field">
+                <div class="fields-container">
+                  <label class="label-options" for="height">Weight</label>
+                  <div class="imperial-input-container">
+                    <input
+                      class="imperial-input"
+                      type="number"
+                      name="Weight"
+                      id="st"
+                      placeholder="0"
+                    />
+                    <p class="units-1">st</p>
+                    <input
+                      class="imperial-input"
+                      type="number"
+                      name="Weight"
+                      id="lbs"
+                      placeholder="0"
+                    />
+                    <p class="units">lbs</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- BMI result area -->
-          <div class="output">
-            <div>
-              <p class="your-bmi">Your BMI is...</p>
-              <p class="bmi">23.4</p>
-            </div>
-            <p class="output-info">
-              Your BMI suggests you’re a healthy weight. Your ideal weight is
-              between <span>63.3kgs - 85.2kgs</span>.
-            </p>
-            <!-- <p class="welcome">Welcome!</p>
+            <!-- BMI result area -->
+            <div class="output">
+              <div>
+                <p class="your-bmi">Your BMI is...</p>
+                <p class="bmi">23.4</p>
+              </div>
+              <p class="output-info">
+                Your BMI suggests you’re a healthy weight. Your ideal weight is
+                between <span>63.3kgs - 85.2kgs</span>.
+              </p>
+              <!-- <p class="welcome">Welcome!</p>
             <p class="welcome-info">
               Enter your height and weight and you’ll see your BMI result here
             </p> -->
+            </div>
           </div>
-        </div>
+        </header>
       </section>
       <!-- Results info section -->
       <section class="results">
