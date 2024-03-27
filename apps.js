@@ -17,7 +17,18 @@ imperialBtn.addEventListener("click", function () {
   metricBtn.checked = false;
   metricInput.style.display = "none";
   imperialInput.style.display = "block";
-  // hero.style.marginBottom = "400px";
+
+  // Adjust margin-bottom of hero based on screen size when imperialBtn is clicked
+  const screenWidth = window.innerWidth;
+  if (screenWidth >= 975) {
+    // min-width: 81.25rem (81.25rem * 16px = 1300px)
+    hero.style.marginBottom = "4.0625rem"; // 4.0625rem
+  } else if (screenWidth >= 600) {
+    // min-width: 37.5rem (37.5rem * 16px = 600px)
+    hero.style.marginBottom = "25rem"; // 25rem
+  } else {
+    hero.style.marginBottom = "36.25rem"; // Default: 36.25rem
+  }
 });
 
 const bmiResult = document.querySelector(".output");
