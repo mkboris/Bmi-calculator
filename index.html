@@ -46,7 +46,7 @@
           </p>
         </div>
         <!-- BMI calculator -->
-        <div class="calculator">
+        <form id="bmiCalculatorForm" class="calculator">
           <p class="calc-heading">Enter your details below</p>
           <!-- Radio buttons -->
           <div class="radio-btns">
@@ -55,8 +55,8 @@
                 checked
                 class="radio"
                 type="radio"
-                name="metric"
-                id="metricRadio"
+                name="measurement-system"
+                id="metric"
               />
               <label class="label-radio" for="metric">Metric</label>
             </div>
@@ -64,8 +64,8 @@
               <input
                 class="radio"
                 type="radio"
-                name="imperial"
-                id="imperialRadio"
+                name="measurement-system"
+                id="imperial"
               />
               <label class="label-radio" for="imperial">Imperial</label>
             </div>
@@ -73,7 +73,7 @@
           <!-- Metric input fields -->
           <div class="input-fields metric">
             <div class="fields-container">
-              <label class="label-options" for="height">Height</label>
+              <label class="label-options" for="cm">Height</label>
               <input
                 class="metric-input"
                 type="number"
@@ -85,7 +85,7 @@
               <p class="units">cm</p>
             </div>
             <div class="fields-container">
-              <label class="label-options" for="weight">Weight</label>
+              <label class="label-options" for="kg">Weight</label>
               <input
                 class="metric-input"
                 type="number"
@@ -106,7 +106,7 @@
                   <input
                     class="imperial-input"
                     type="number"
-                    name="height"
+                    name="height-feet"
                     min="0"
                     id="feet"
                     placeholder="0"
@@ -115,7 +115,7 @@
                   <input
                     class="imperial-input"
                     type="number"
-                    name="height"
+                    name="height-inches"
                     min="0"
                     max="11"
                     id="inches"
@@ -127,12 +127,12 @@
             </div>
             <div class="imperial-field">
               <div class="fields-container">
-                <label class="label-options" for="height">Weight</label>
+                <label class="label-options" for="weight">Weight</label>
                 <div class="imperial-input-container">
                   <input
                     class="imperial-input"
                     type="number"
-                    name="weight"
+                    name="weight-stone"
                     min="0"
                     id="stone"
                     placeholder="0"
@@ -141,7 +141,7 @@
                   <input
                     class="imperial-input"
                     type="number"
-                    name="weight"
+                    name="weight-lbs"
                     min="0"
                     max="13"
                     id="lbs"
@@ -172,7 +172,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </form>
       </section>
       <!-- Results info section -->
       <section class="results">

@@ -1,7 +1,7 @@
 "use strict";
 
-const metricBtn = document.getElementById("metricRadio");
-const imperialBtn = document.getElementById("imperialRadio");
+const metricBtn = document.getElementById("metric");
+const imperialBtn = document.getElementById("imperial");
 const metricInput = document.querySelector(".metric");
 const imperialInput = document.querySelector(".imperial");
 const hero = document.querySelector(".hero");
