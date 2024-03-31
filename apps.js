@@ -17,18 +17,6 @@ imperialBtn.addEventListener("click", function () {
   metricBtn.checked = false;
   metricInput.style.display = "none";
   imperialInput.style.display = "block";
-
-  // Adjust margin-bottom of hero based on screen size when imperialBtn is clicked
-  const screenWidth = window.innerWidth;
-  if (screenWidth >= 975) {
-    // min-width: 81.25rem (81.25rem * 16px = 1300px)
-    hero.style.marginBottom = "4.0625rem"; // 4.0625rem
-  } else if (screenWidth >= 600) {
-    // min-width: 37.5rem (37.5rem * 16px = 600px)
-    hero.style.marginBottom = "25rem"; // 25rem
-  } else {
-    hero.style.marginBottom = "36.25rem"; // Default: 36.25rem
-  }
 });
 
 const bmiResult = document.querySelector(".output");
@@ -47,7 +35,7 @@ function calcBmiMetric() {
   const heightCm = parseFloat(metricHeight.value) || 0;
   const weightKg = parseFloat(metricWeight.value) || 0;
 
-  const bmi = weightKg / Math.pow(heightCm, 2);
+  const bmi = weightKg / Math.pow(heightCm / 100, 2);
 
   welcomeContainer.style.display = "none";
   resultContainer.style.display = "flex";
@@ -56,16 +44,16 @@ function calcBmiMetric() {
 
   if (bmi < 18.5) {
     classification.textContent = "Underweight";
-    range.textContent = "less than 18.5kgs";
+    range.textContent = "less than 53.5kgs";
   } else if (bmi >= 18.5 && bmi <= 24.9) {
     classification.textContent = "a Healthy weight";
-    range.textContent = "between 18.5kgs - 24.9kgs";
+    range.textContent = "between 56kgs - 72kgs";
   } else if (bmi >= 25 && bmi <= 29.9) {
     classification.textContent = "Overweight";
-    range.textContent = "between 25kgs - 29.9kgs";
+    range.textContent = "between 73kgs - 87kgs";
   } else if (bmi >= 30) {
     classification.textContent = "Obese";
-    range.textContent = "30kgs or greater";
+    range.textContent = "88kgs or greater";
   }
 }
 
@@ -96,16 +84,16 @@ function calcBmiImperial() {
 
   if (bmi < 18.5) {
     classification.textContent = "Underweight";
-    range.textContent = "less than 18.5kgs";
+    range.textContent = "less than 117.95lbs";
   } else if (bmi >= 18.5 && bmi <= 24.9) {
     classification.textContent = "a Healthy weight";
-    range.textContent = "between 18.5kgs - 24.9kgs";
+    range.textContent = "between 123.46lbs - 158.73lbs";
   } else if (bmi >= 25 && bmi <= 29.9) {
     classification.textContent = "Overweight";
-    range.textContent = "between 25kgs - 29.9kgs";
+    range.textContent = "between 160.94lbs - 191.80lbs";
   } else if (bmi >= 30) {
     classification.textContent = "Obese";
-    range.textContent = "30kgs or greater";
+    range.textContent = "194.01lbs or greater";
   }
 }
 

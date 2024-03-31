@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Calculate your Body Mass Index (BMI) and understand what your BMI result means. Learn about healthy weight ranges and get tips for maintaining a healthy lifestyle."
+    />
     <link
       rel="icon"
       type="image/png"
@@ -28,7 +32,11 @@
         <header class="intro">
           <!-- Logo and intro text container -->
           <div class="logo-text">
-            <img class="logo" src="assets/images/logo.svg" alt="" />
+            <img
+              class="logo"
+              src="assets/images/logo.svg"
+              alt="BMI Calculator logo"
+            />
             <h1>Body Mass Index Calculator</h1>
             <p class="intro-paragraph">
               Better understand your weight in relation to your height using our
@@ -38,7 +46,7 @@
             </p>
           </div>
           <!-- BMI calculator -->
-          <div class="calculator calc-mb">
+          <div class="calculator">
             <p class="calc-heading">Enter your details below</p>
             <!-- Radio buttons -->
             <div class="radio-btns">
@@ -47,7 +55,7 @@
                   checked
                   class="radio"
                   type="radio"
-                  name="Metric"
+                  name="metric"
                   id="metricRadio"
                 />
                 <label class="label-radio" for="metric">Metric</label>
@@ -56,7 +64,7 @@
                 <input
                   class="radio"
                   type="radio"
-                  name="Imperial"
+                  name="imperial"
                   id="imperialRadio"
                 />
                 <label class="label-radio" for="imperial">Imperial</label>
@@ -69,7 +77,7 @@
                 <input
                   class="metric-input"
                   type="number"
-                  name="Height"
+                  name="height"
                   min="0"
                   id="cm"
                   placeholder="0"
@@ -81,7 +89,7 @@
                 <input
                   class="metric-input"
                   type="number"
-                  name="Weight"
+                  name="weight"
                   min="0"
                   id="kg"
                   placeholder="0"
@@ -98,7 +106,7 @@
                     <input
                       class="imperial-input"
                       type="number"
-                      name="Height"
+                      name="height"
                       min="0"
                       id="feet"
                       placeholder="0"
@@ -107,7 +115,7 @@
                     <input
                       class="imperial-input"
                       type="number"
-                      name="Height"
+                      name="height"
                       min="0"
                       max="11"
                       id="inches"
@@ -124,7 +132,7 @@
                     <input
                       class="imperial-input"
                       type="number"
-                      name="Weight"
+                      name="weight"
                       min="0"
                       id="stone"
                       placeholder="0"
@@ -133,7 +141,7 @@
                     <input
                       class="imperial-input"
                       type="number"
-                      name="Weight"
+                      name="weight"
                       min="0"
                       max="13"
                       id="lbs"
