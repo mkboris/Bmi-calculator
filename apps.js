@@ -44,16 +44,16 @@ function calcBmiMetric() {
 
   if (bmi < 18.5) {
     classification.textContent = "Underweight";
-    range.textContent = "less than 53.5kgs";
+    range.textContent = "less than 53.5kgs.";
   } else if (bmi >= 18.5 && bmi <= 24.9) {
     classification.textContent = "a Healthy weight";
-    range.textContent = "between 56kgs - 72kgs";
+    range.textContent = "between 56kgs - 72kgs.";
   } else if (bmi >= 25 && bmi <= 29.9) {
     classification.textContent = "Overweight";
-    range.textContent = "between 73kgs - 87kgs";
+    range.textContent = "between 73kgs - 87kgs.";
   } else if (bmi >= 30) {
     classification.textContent = "Obese";
-    range.textContent = "88kgs or greater";
+    range.textContent = "88kgs or greater.";
   }
 }
 
@@ -84,16 +84,16 @@ function calcBmiImperial() {
 
   if (bmi < 18.5) {
     classification.textContent = "Underweight";
-    range.textContent = "less than 117.95lbs";
+    range.textContent = "less than 8st 10lbs.";
   } else if (bmi >= 18.5 && bmi <= 24.9) {
     classification.textContent = "a Healthy weight";
-    range.textContent = "between 123.46lbs - 158.73lbs";
+    range.textContent = "between 9st 4lbs - 12st 0lbs.";
   } else if (bmi >= 25 && bmi <= 29.9) {
     classification.textContent = "Overweight";
-    range.textContent = "between 160.94lbs - 191.80lbs";
+    range.textContent = "between 11st 6lbs - 14st 2lbs.";
   } else if (bmi >= 30) {
     classification.textContent = "Obese";
-    range.textContent = "194.01lbs or greater";
+    range.textContent = "14st 2lbs or greater.";
   }
 }
 
