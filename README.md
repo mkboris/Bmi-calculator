@@ -1,16 +1,13 @@
 # Frontend Mentor - Body Mass Index Calculator solution
 
-This is a solution to the [Body Mass Index Calculator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/body-mass-index-calculator-brrBkfSz1T). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-  - [Continued development](#continued-development)
+  - [Built with](#built-with)
 - [Author](#author)
-
 
 
 ## Overview
@@ -32,9 +29,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/mkboris/bmi-calculator
-- Live Site URL: https://bmi-calculator-ten-kappa.vercel.app/
-- 
+- [Solution](https://github.com/mkboris/bmi-calculator)
+- [Live Site](https://bmi-calculator-ten-kappa.vercel.app/)
+  
 ### Built with
 
 - Semantic HTML5 markup
@@ -42,10 +39,6 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-
-### Continued development
-
-Building more projects to improve my skills.
 
 ## Author
 
