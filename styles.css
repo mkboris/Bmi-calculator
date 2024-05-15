@@ -486,7 +486,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .limitations {
-  margin: 0 1.8125rem 6rem 1.1875rem;
+  margin: 0 1.8125rem 6rem;
 }
 
 .limits-text {
@@ -649,7 +649,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .limitations {
-    margin: 0 2.6875rem 5.994375rem 2.4375rem;
+    margin: 0 2.6875rem 6rem;
     display: grid;
     grid-template-columns: repeat(4, auto);
     justify-items: center;
@@ -796,7 +796,8 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: row;
     padding: 4.5rem 7.3125rem 6rem 7.25rem;
     border-radius: 2.1875rem;
-    margin-bottom: 7.5rem;
+    max-width: 87rem;
+    margin: 0 auto 7.5rem;
   }
 
   .tips .tips-container {
@@ -808,7 +809,9 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .limitations {
-    margin: 0 calc(6.8% + 45px) 7.5rem;
+    max-width: 69.375rem;
+    margin: 0 auto 7.5rem;
+    padding: 0 2.6875rem;
     grid-template-columns: auto auto auto;
     row-gap: 2rem;
     column-gap: 2rem;
