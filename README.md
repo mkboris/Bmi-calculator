@@ -9,7 +9,6 @@
   - [Built with](#built-with)
 - [Author](#author)
 
-
 ## Overview
 
 ### The challenge
@@ -24,13 +23,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](/design/Desktop.jpg)
+![](/design/preview.jpg)
 
 ### Links
 
 - [Solution](https://github.com/mkboris/bmi-calculator)
 - [Live Site](https://bmi-calculator-ten-kappa.vercel.app/)
-  
+
 ### Built with
 
 - Semantic HTML5 markup
@@ -42,4 +41,3 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@mkboris](https://www.frontendmentor.io/profile/mkboris)
-
