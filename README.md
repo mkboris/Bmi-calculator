@@ -28,7 +28,6 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://github.com/mkboris/bmi-calculator)
 - [Live Site](https://bmi-calculator-ten-kappa.vercel.app/)
 
 ### Built with
@@ -45,4 +44,5 @@ Getting this layout responsive was not easy and straight forward as I initially 
 
 ## Author
 
-- Frontend Mentor - [@mkboris](https://www.frontendmentor.io/profile/mkboris)
+- Frontend Mentor - [makogeboris](https://www.frontendmentor.io/profile/makogeboris)
+- Twitter - [makogeboris](https://x.com/makogeboris)
